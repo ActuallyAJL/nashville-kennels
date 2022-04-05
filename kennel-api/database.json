@@ -1,0 +1,32 @@
+{
+    "animals": [
+        { "id": 1, "name": "Doodles", "breed": "Poodle"},
+        { "id": 2, "name": "Parsley", "breed": "Great Dane" },
+        { "id": 3, "name": "Esme", "breed": "Pitbull" }
+    ],
+    "customers": [
+        {
+            "id": 1,
+            "name": "Luke Skywalker",
+            "address": "976 Tatooine Dr."
+        },
+         {
+            "id": 2,
+            "name": "Padmé Amidala",
+            "address": "1211 Naboo Lane"
+        }
+    ],
+    "employees": [],
+    "locations": [
+        {
+            "id": 1,
+            "name": "Nashville North",
+            "address": "8422 Johnson Pike"
+        },
+        {
+            "id": 2,
+            "name": "Nashville South",
+            "address": "209 Emory Drive"
+        }
+    ]
+}
