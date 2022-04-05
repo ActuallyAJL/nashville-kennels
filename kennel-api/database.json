@@ -1,32 +1,63 @@
 {
-    "animals": [
-        { "id": 1, "name": "Doodles", "breed": "Poodle"},
-        { "id": 2, "name": "Parsley", "breed": "Great Dane" },
-        { "id": 3, "name": "Esme", "breed": "Pitbull" }
-    ],
-    "customers": [
-        {
-            "id": 1,
-            "name": "Luke Skywalker",
-            "address": "976 Tatooine Dr."
-        },
-         {
-            "id": 2,
-            "name": "Padmé Amidala",
-            "address": "1211 Naboo Lane"
-        }
-    ],
-    "employees": [],
-    "locations": [
-        {
-            "id": 1,
-            "name": "Nashville North",
-            "address": "8422 Johnson Pike"
-        },
-        {
-            "id": 2,
-            "name": "Nashville South",
-            "address": "209 Emory Drive"
-        }
-    ]
+  "animals": [
+    {
+      "id": 1,
+      "name": "Doodles",
+      "breed": "Poodle",
+      "customerId": 1
+    },
+    {
+      "id": 2,
+      "name": "Parsley",
+      "breed": "Great Dane",
+      "customerId": 2
+    },
+    {
+      "id": 3,
+      "name": "Esme",
+      "breed": "Pitbull",
+      "customerId": 3
+    },
+    {
+      "id": 4,
+      "name": "Chewbacca",
+      "breed": "Wookie",
+      "customerId": 4
+    }
+  ],
+  "customers": [
+    {
+      "id": 1,
+      "name": "Luke Skywalker",
+      "address": "976 Tatooine Dr."
+    },
+    {
+      "id": 2,
+      "name": "Padmé Amidala",
+      "address": "1211 Naboo Lane"
+    },
+    {
+      "id": 3,
+      "name": "Darth JarJar",
+      "address": "666 Emire Way"
+    },
+    {
+      "id": 4,
+      "name": "Han Solo",
+      "address": "N/A"
+    }
+  ],
+  "employees": [],
+  "locations": [
+    {
+      "id": 1,
+      "name": "Nashville North",
+      "address": "8422 Johnson Pike"
+    },
+    {
+      "id": 2,
+      "name": "Nashville South",
+      "address": "209 Emory Drive"
+    }
+  ]
 }
