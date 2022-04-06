@@ -4,25 +4,29 @@
       "id": 1,
       "name": "Doodles",
       "breed": "Poodle",
-      "customerId": 1
+      "customerId": 1,
+      "locationId": 1
     },
     {
       "id": 2,
       "name": "Parsley",
       "breed": "Great Dane",
-      "customerId": 2
+      "customerId": 2,
+      "locationId": 2
     },
     {
       "id": 3,
       "name": "Esme",
       "breed": "Pitbull",
-      "customerId": 3
+      "customerId": 3,
+      "locationId": 1
     },
     {
       "id": 4,
       "name": "Chewbacca",
       "breed": "Wookie",
-      "customerId": 4
+      "customerId": 4,
+      "locationId": 2
     }
   ],
   "customers": [
@@ -39,7 +43,7 @@
     {
       "id": 3,
       "name": "Darth JarJar",
-      "address": "666 Emire Way"
+      "address": "666 Empire Way"
     },
     {
       "id": 4,
@@ -47,7 +51,28 @@
       "address": "N/A"
     }
   ],
-  "employees": [],
+  "employees": [
+    {
+      "id": 1,
+      "name": "Frensley Portent",
+      "address": "829 Alabaster Rd."
+    },
+    {
+      "id": 2,
+      "name": "Rake Blightley",
+      "address": "4242 Outstretched Terrace"
+    },
+    {
+      "id": 3,
+      "name": "Carrie-Anne Sturn",
+      "address": "3001 Beard Avenue"
+    },
+    {
+      "id": 4,
+      "name": "Exceptional Jafar",
+      "address": "3 Footly Underpass"
+    }
+  ],
   "locations": [
     {
       "id": 1,
@@ -58,6 +83,13 @@
       "id": 2,
       "name": "Nashville South",
       "address": "209 Emory Drive"
+    }
+  ],
+  "owners": [
+    {
+      "id": 1,
+      "name": "Dwight Packard",
+      "phoneNumber": "615-555-2199"
     }
   ]
 }

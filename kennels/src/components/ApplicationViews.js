@@ -1,10 +1,10 @@
 import React from "react"
 import { Route, Routes} from "react-router-dom"
 import { Home } from "./Home"
-import { AnimalCard } from './animal/AnimalCard.js'
-import { EmployeeCard } from './employee/EmployeeCard.js'
-import { LocationCard } from './location/LocationCard.js'
-import { CustomerCard } from './customer/CustomerCard.js'
+import { AnimalList } from './animal/AnimalList.js'
+import { EmployeeList } from './employee/EmployeeList.js'
+import { LocationList } from './location/LocationList.js'
+import { CustomerList } from './customer/CustomerList.js'
 
 export const ApplicationViews = () => {
     return (
@@ -14,10 +14,10 @@ export const ApplicationViews = () => {
                 <Route exact path="/" element={<Home />} />
 
                 {/* Render the animal list when http://localhost:3000/animals */}
-                <Route path="/animals" element={<AnimalCard />} />
-                <Route path="/locations" element={<LocationCard />} />
-                <Route path="/customers" element={<CustomerCard />} />
-                <Route path="/employees" element={<EmployeeCard />} />
+                <Route path="/animals" element={<AnimalList />} />
+                <Route path="/locations" element={<LocationList />} />
+                <Route path="/customers" element={<CustomerList />} />
+                <Route path="/employees" element={<EmployeeList />} />
             </Routes>
         </>
     )
