@@ -9,3 +9,9 @@ export const getAllOwners = () => {
   return fetch(`${remoteURL}/owners`)
   .then(res => res.json())
 }
+
+export const deleteOwner = id => {
+  return fetch(`${remoteURL}/owners/${id}`, {
+    method: "DELETE"
+  }).then(result => result.json())
+}

@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 //import the components we will need
-import { CustomerCard } from './CustomerCard';
-import { getAllCustomers, getCustomerById } from '../../modules/CustomerManager';
+import { CustomerCard } from "./CustomerCard";
+import {
+  getAllCustomers,
+  getCustomerById,
+  deleteCustomer,
+} from "../../modules/CustomerManager";
 
 export const CustomerList = () => {
   // The initial state is an empty array
@@ -10,9 +14,13 @@ export const CustomerList = () => {
   const getCustomers = () => {
     // After the data comes back from the API, we
     // use the setAnimals function to update state
-    return getAllCustomers().then(customersFromAPI => {
-      setCustomers(customersFromAPI)
+    return getAllCustomers().then((customersFromAPI) => {
+      setCustomers(customersFromAPI);
     });
+  };
+
+  const handleDeleteCustomer = (id) => {
+    deleteCustomer(id).then(() => getAllCustomers().then(setCustomers));
   };
 
   // got the animals from the API on the component's first render
@@ -21,11 +29,15 @@ export const CustomerList = () => {
   }, []);
 
   // Finally we use .map() to "loop over" the animals array to show a list of animal cards
-  return(
+  return (
     <div className="container-cards">
-      {customers.map(customer =>
-        <CustomerCard key={customer.id} customer={customer} />
-      )}
+      {customers.map((customer) => (
+        <CustomerCard
+          key={customer.id}
+          customer={customer}
+          handleDeleteCustomer={handleDeleteCustomer}
+        />
+      ))}
     </div>
   );
 };

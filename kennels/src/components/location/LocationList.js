@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 //import the components we will need
-import { LocationCard } from './LocationCard';
-import { getAllLocations, getLocationById } from '../../modules/LocationManager';
+import { LocationCard } from "./LocationCard";
+import {
+  getAllLocations,
+  getLocationById,
+  deleteLocation,
+} from "../../modules/LocationManager";
 
 export const LocationList = () => {
   // The initial state is an empty array
@@ -10,9 +14,13 @@ export const LocationList = () => {
   const getLocations = () => {
     // After the data comes back from the API, we
     // use the setAnimals function to update state
-    return getAllLocations().then(locationsFromAPI => {
-      setLocations(locationsFromAPI)
+    return getAllLocations().then((locationsFromAPI) => {
+      setLocations(locationsFromAPI);
     });
+  };
+
+  const handleDeleteLocation = (id) => {
+    deleteLocation(id).then(() => getAllLocations().then(setLocations));
   };
 
   // got the animals from the API on the component's first render
@@ -21,11 +29,15 @@ export const LocationList = () => {
   }, []);
 
   // Finally we use .map() to "loop over" the animals array to show a list of animal cards
-  return(
+  return (
     <div className="container-cards">
-      {locations.map(location =>
-        <LocationCard key={location.id} location={location} />
-      )}
+      {locations.map((location) => (
+        <LocationCard
+          key={location.id}
+          location={location}
+          handleDeleteLocation={handleDeleteLocation}
+        />
+      ))}
     </div>
   );
 };
