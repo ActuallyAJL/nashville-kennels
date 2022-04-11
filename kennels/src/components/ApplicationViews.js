@@ -4,6 +4,7 @@ import { Home } from "./Home";
 import { AnimalList } from "./animal/AnimalList.js";
 import { AnimalDetail } from "./animal/animalDetail.js";
 import { AnimalForm } from "./animal/AnimalForm.js";
+import { AnimalEditForm } from "./animal/AnimalEditForm";
 import { EmployeeList } from "./employee/EmployeeList.js";
 import { LocationList } from "./location/LocationList.js";
 import { CustomerList } from "./customer/CustomerList.js";
@@ -46,10 +47,19 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
           }
         />
         <Route
+          exact
           path="/animals/details/:animalId"
           element={
             <PrivateRoute>
               <AnimalDetail />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/animals/:animalId/edit"
+          element={
+            <PrivateRoute>
+              <AnimalEditForm />
             </PrivateRoute>
           }
         />

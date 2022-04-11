@@ -27,6 +27,13 @@
       "breed": "Wookie",
       "customerId": 4,
       "locationId": 2
+    },
+    {
+      "name": "Brian Shumaker III",
+      "breed": "Face-Eating Leopard",
+      "locationId": 1,
+      "customerId": 1,
+      "id": 5
     }
   ],
   "customers": [
