@@ -27,6 +27,13 @@
       "breed": "Wookie",
       "customerId": 4,
       "locationId": 2
+    },
+    {
+      "name": "Harrison",
+      "breed": "Human",
+      "locationId": 2,
+      "customerId": 4,
+      "id": 5
     }
   ],
   "customers": [

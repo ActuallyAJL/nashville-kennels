@@ -7,6 +7,7 @@ import { AnimalForm } from './animal/AnimalForm.js'
 import { EmployeeList } from './employee/EmployeeList.js'
 import { LocationList } from './location/LocationList.js'
 import { CustomerList } from './customer/CustomerList.js'
+import { MadLib } from './madlib/MadLib.js'
 
 export const ApplicationViews = () => {
     return (
@@ -22,6 +23,7 @@ export const ApplicationViews = () => {
                 <Route path="/locations" element={<LocationList />} />
                 <Route path="/customers" element={<CustomerList />} />
                 <Route path="/employees" element={<EmployeeList />} />
+                <Route path="/madlib" element={<MadLib />} />
             </Routes>
         </>
     )
