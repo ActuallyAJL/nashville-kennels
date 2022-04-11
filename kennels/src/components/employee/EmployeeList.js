@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-//import the components we will need
+import { useNavigate } from "react-router-dom";
 import { EmployeeCard } from "./EmployeeCard";
 import {
   getAllEmployees,
@@ -13,7 +13,7 @@ export const EmployeeList = () => {
 
   const getEmployees = () => {
     // After the data comes back from the API, we
-    // use the setAnimals function to update state
+    // use the setEmployees function to update state
     return getAllEmployees().then((employeesFromAPI) => {
       setEmployees(employeesFromAPI);
     });
@@ -23,21 +23,36 @@ export const EmployeeList = () => {
     deleteEmployee(id).then(() => getAllEmployees().then(setEmployees));
   };
 
-  // got the animals from the API on the component's first render
+  const navigate = useNavigate();
+
+  // got the employees from the API on the component's first render
   useEffect(() => {
     getEmployees();
   }, []);
 
-  // Finally we use .map() to "loop over" the animals array to show a list of animal cards
+  // Finally we use .map() to "loop over" the employees array to show a list of employee cards
   return (
-    <div className="container-cards">
-      {employees.map((employee) => (
-        <EmployeeCard
-          key={employee.id}
-          employee={employee}
-          handleDeleteEmployee={handleDeleteEmployee}
-        />
-      ))}
-    </div>
+    <>
+      <div className="container-cards">
+        {employees.map((employee) => (
+          <EmployeeCard
+            key={employee.id}
+            employee={employee}
+            handleDeleteEmployee={handleDeleteEmployee}
+          />
+        ))}
+      </div>
+      <section className="section-content">
+        <button
+          type="button"
+          className="btn"
+          onClick={() => {
+            navigate("/employees/create");
+          }}
+        >
+          Hire Employee
+        </button>
+      </section>
+    </>
   );
 };

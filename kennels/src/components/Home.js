@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { AnimalSpotlight } from "../components/animal/AnimalSpotlight"
-import { getRandomId } from "../modules/AnimalManager"
+import { AnimalSpotlight } from "../components/animal/AnimalSpotlight";
+import { getRandomId } from "../modules/AnimalManager";
 import { PropsAndState } from "./PropsAndState";
 
 export const Home = () => {
@@ -23,10 +23,8 @@ export const Home = () => {
       </address>
       <h1>Animal Spotlight</h1>
       <button onClick={refreshSpotlightAnimal}>Reload &#x27f3;</button>
-      {
-        spotlightId && <AnimalSpotlight animalId={spotlightId} />
-      }
-      <PropsAndState yourName={'Alex'} />
+      {spotlightId && <AnimalSpotlight animalId={spotlightId} />}
+      <PropsAndState yourName={"Alex"} />
     </>
   );
 };

@@ -64,7 +64,8 @@
     {
       "email": "bs@ww.com",
       "name": "Bernard Shaw",
-      "id": 5
+      "id": 5,
+      "address": "509 Pointer Place"
     }
   ],
   "employees": [

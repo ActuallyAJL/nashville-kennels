@@ -27,6 +27,13 @@
       "breed": "Wookie",
       "customerId": 4,
       "locationId": 2
+    },
+    {
+      "name": "Brian Shumaker III",
+      "breed": "Face-Eating Leopard",
+      "locationId": 1,
+      "customerId": 1,
+      "id": 5
     }
   ],
   "customers": [
@@ -34,25 +41,37 @@
       "id": 1,
       "name": "Luke Skywalker",
       "address": "976 Tatooine Dr.",
-      "email" : "ls@ls.com"
+      "email": "ls@ls.com"
     },
     {
       "id": 2,
       "name": "Padmé Amidala",
       "address": "1211 Naboo Lane",
-      "email" : "pa@pa.com"
+      "email": "pa@pa.com"
     },
     {
       "id": 3,
       "name": "Darth JarJar",
       "address": "666 Empire Way",
-      "email" : "dj@dj.com"
+      "email": "dj@dj.com"
     },
     {
       "id": 4,
       "name": "Han Solo",
       "address": "N/A",
-      "email" : "hs@hs.com"
+      "email": "hs@hs.com"
+    },
+    {
+      "email": "bs@ww.com",
+      "name": "Bernard Shaw",
+      "id": 5,
+      "address": "509 Pointer Place"
+    },
+    {
+      "email": "al@al.com",
+      "name": "Alex Levy",
+      "id": 6,
+      "address": "Nunya"
     }
   ],
   "employees": [

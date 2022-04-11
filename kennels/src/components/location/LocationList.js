@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-//import the components we will need
+import { useNavigate } from "react-router-dom";
 import { LocationCard } from "./LocationCard";
 import {
   getAllLocations,
@@ -23,6 +23,8 @@ export const LocationList = () => {
     deleteLocation(id).then(() => getAllLocations().then(setLocations));
   };
 
+  const navigate = useNavigate();
+
   // got the animals from the API on the component's first render
   useEffect(() => {
     getLocations();
@@ -30,14 +32,27 @@ export const LocationList = () => {
 
   // Finally we use .map() to "loop over" the animals array to show a list of animal cards
   return (
-    <div className="container-cards">
-      {locations.map((location) => (
-        <LocationCard
-          key={location.id}
-          location={location}
-          handleDeleteLocation={handleDeleteLocation}
-        />
-      ))}
-    </div>
+    <>
+      <div className="container-cards">
+        {locations.map((location) => (
+          <LocationCard
+            key={location.id}
+            location={location}
+            handleDeleteLocation={handleDeleteLocation}
+          />
+        ))}
+      </div>
+      <section className="section-content">
+        <button
+          type="button"
+          className="btn"
+          onClick={() => {
+            navigate("/locations/create");
+          }}
+        >
+          Build Location
+        </button>
+      </section>
+    </>
   );
 };
