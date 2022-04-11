@@ -27,35 +27,37 @@
       "breed": "Wookie",
       "customerId": 4,
       "locationId": 2
-    },
-    {
-      "name": "Harrison",
-      "breed": "Human",
-      "locationId": 2,
-      "customerId": 4,
-      "id": 5
     }
   ],
   "customers": [
     {
       "id": 1,
       "name": "Luke Skywalker",
-      "address": "976 Tatooine Dr."
+      "address": "976 Tatooine Dr.",
+      "email": "ls@ls.com"
     },
     {
       "id": 2,
       "name": "Padmé Amidala",
-      "address": "1211 Naboo Lane"
+      "address": "1211 Naboo Lane",
+      "email": "pa@pa.com"
     },
     {
       "id": 3,
       "name": "Darth JarJar",
-      "address": "666 Empire Way"
+      "address": "666 Empire Way",
+      "email": "dj@dj.com"
     },
     {
       "id": 4,
       "name": "Han Solo",
-      "address": "N/A"
+      "address": "N/A",
+      "email": "hs@hs.com"
+    },
+    {
+      "email": "bs@ww.com",
+      "name": "Bernard Shaw",
+      "id": 5
     }
   ],
   "employees": [
