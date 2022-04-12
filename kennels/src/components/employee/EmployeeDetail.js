@@ -35,11 +35,8 @@ export const EmployeeDetail = () => {
     <section className="employee">
       <h3 className="employee__name">{employee.name}</h3>
       <div className="employee__address">{employee.address}</div>
-      {/* What's up with the question mark???? */}
-      {/* <div className="employee__location">Location: {employee.location?.name}</div>
-      <div className="employee__owner">Customer: {employee.customer?.name}</div> */}
       <button type="button" disabled={isLoading} onClick={handleDelete}>
-          Discharge
+          Sack
         </button>
     </section>
   );

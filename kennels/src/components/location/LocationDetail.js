@@ -23,10 +23,7 @@ export const LocationDetail = () => {
     console.log("useEffect", locationId)
     getLocationById(locationId)
       .then(location => {
-        setLocation({
-          name: location.name,
-          address: location.address
-        });
+        setLocation(location);
         setIsLoading(false);
       });
   }, [locationId]);
@@ -35,11 +32,8 @@ export const LocationDetail = () => {
     <section className="location">
       <h3 className="location__name">{location.name}</h3>
       <div className="location__address">{location.address}</div>
-      {/* What's up with the question mark???? */}
-      <div className="location__location">Location: {location.location?.name}</div>
-      <div className="location__owner">Customer: {location.customer?.name}</div>
       <button type="button" disabled={isLoading} onClick={handleDelete}>
-          Discharge
+          Nuke
         </button>
     </section>
   );

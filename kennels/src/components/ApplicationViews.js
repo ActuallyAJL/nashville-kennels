@@ -90,7 +90,7 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
         />
         <Route
           exact
-          path="/locations/details/:locationId"
+          path="/locations/:locationId"
           element={
             <PrivateRoute>
               <LocationDetail />
@@ -123,7 +123,7 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
         />
          <Route
           exact
-          path="/customers/details/:customerId"
+          path="/customers/:customerId"
           element={
             <PrivateRoute>
               <CustomerDetail />
@@ -156,7 +156,7 @@ export const ApplicationViews = ({ isAuthenticated, setIsAuthenticated }) => {
         />
          <Route
           exact
-          path="/employees/details/:employeeId"
+          path="/employees/:employeeId"
           element={
             <PrivateRoute>
               <EmployeeDetail />

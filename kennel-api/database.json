@@ -66,6 +66,12 @@
       "name": "Bernard Shaw",
       "id": 5,
       "address": "509 Pointer Place"
+    },
+    {
+      "email": "al@al.com",
+      "name": "Alex Levy",
+      "id": 6,
+      "address": "Nunya"
     }
   ],
   "employees": [

@@ -7,28 +7,22 @@ export const AnimalDetail = () => {
   const [animal, setAnimal] = useState({ name: "", breed: "" });
   const [isLoading, setIsLoading] = useState(true);
 
-  const {animalId} = useParams();
+  const { animalId } = useParams();
   const navigate = useNavigate();
 
   const handleDelete = () => {
     //invoke the delete function in AnimalManger and re-direct to the animal list.
     setIsLoading(true);
-    deleteAnimal(animalId).then(() =>
-      navigate("/animals")
-    );
+    deleteAnimal(animalId).then(() => navigate("/animals"));
   };
 
   useEffect(() => {
     //getAnimalById(id) from AnimalManager and hang on to the data; put it into state
-    console.log("useEffect", animalId)
-    getAnimalById(animalId)
-      .then(animal => {
-        setAnimal({
-          name: animal.name,
-          breed: animal.breed
-        });
-        setIsLoading(false);
-      });
+    console.log("useEffect", animalId);
+    getAnimalById(animalId).then((animal) => {
+      setAnimal(animal);
+      setIsLoading(false);
+    });
   }, [animalId]);
 
   return (
@@ -39,8 +33,8 @@ export const AnimalDetail = () => {
       <div className="animal__location">Location: {animal.location?.name}</div>
       <div className="animal__owner">Customer: {animal.customer?.name}</div>
       <button type="button" disabled={isLoading} onClick={handleDelete}>
-          Discharge
-        </button>
+        Discharge
+      </button>
     </section>
   );
 };
