@@ -5,35 +5,40 @@
       "name": "Doodles",
       "breed": "Poodle",
       "customerId": 1,
-      "locationId": 1
+      "locationId": 1,
+      "admittedDate": "2022-04-12"
     },
     {
       "id": 2,
       "name": "Parsley",
       "breed": "Great Dane",
       "customerId": 2,
-      "locationId": 2
+      "locationId": 2,
+      "admittedDate": "2022-04-12"
     },
     {
       "id": 3,
       "name": "Esme",
       "breed": "Pitbull",
       "customerId": 3,
-      "locationId": 1
+      "locationId": 1,
+      "admittedDate": "2022-04-12"
     },
     {
       "id": 4,
       "name": "Chewbacca",
       "breed": "Wookie",
       "customerId": 4,
-      "locationId": 2
+      "locationId": 2,
+      "admittedDate": "2022-04-12"
     },
     {
       "name": "Brian Shumaker III",
       "breed": "Face-Eating Leopard",
       "locationId": 1,
       "customerId": 1,
-      "id": 5
+      "id": 5,
+      "admittedDate": "2022-04-12"
     }
   ],
   "customers": [

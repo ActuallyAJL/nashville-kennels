@@ -28,6 +28,7 @@ export const AnimalEditForm = () => {
       breed: animal.breed,
       locationId: 1,
       customerId: 1,
+      admittedDate: animal.admittedDate
     };
 
     //pass the editedAnimal object to the database
@@ -65,6 +66,7 @@ export const AnimalEditForm = () => {
               value={animal.breed}
             />
             <label htmlFor="breed">Breed</label>
+            <h4>Admitted on {animal.admittedDate}</h4>
           </div>
           {/* Be sure to include location and customer */}
           <div className="alignRight">
